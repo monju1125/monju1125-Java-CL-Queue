@@ -35,7 +35,7 @@ public class Lab {
      * Stack behavior.
      */
     public Deque<String> createQueue(){
-        return null;
+        return new ArrayDeque<String>();
     }
 
     /**
@@ -44,7 +44,7 @@ public class Lab {
      * @return the length of queue.
      */
     public int getSize(Queue<String> queue){
-        return 0;
+        return queue.size();
     }
 
     /**
@@ -54,7 +54,7 @@ public class Lab {
      * @param item a String that should be added to Queue.
      */
     public void addToEndOfQueue(Queue<String> queue, String item){
-
+        queue.add(item);
     }
 
     /**
@@ -64,7 +64,8 @@ public class Lab {
      * @return the next String due to be removed (polled) from the Queue<String> (the oldest item in the queue.)
      */
     public String removeFromStartOfQueue(Queue<String> queue){
-        return "";
+        String removed = queue.remove();
+        return removed;
     }
 
     /**
@@ -74,6 +75,7 @@ public class Lab {
      * @return the next String due to be removed (peeked) from the Queue<String> (the oldest item in the queue.)
      */
     public String getStartOfQueueWithoutRemoving(Queue<String> queue){
-        return "";
+        String next = queue.peek();
+        return next;
     }
 }
